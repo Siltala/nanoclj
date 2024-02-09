@@ -33,7 +33,7 @@ jobs:
           mkdir build
           cd build
           scan-build cmake ..
-          scan-build make
+          scan-build --use-c++=clang++ make
 
       # Test
       - name: Testing
