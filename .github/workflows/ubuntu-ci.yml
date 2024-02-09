@@ -29,11 +29,11 @@ jobs:
       - name: Compilation
         run: |
           sudo apt update
-          sudo apt install libutf8proc-dev libsixel-dev libpcre2-dev libcairo2-dev libshp-dev libcurl4-gnutls-dev libxml2-dev libz-dev clang-tools
+          sudo apt install libutf8proc-dev libsixel-dev libpcre2-dev libcairo2-dev libshp-dev libcurl4-gnutls-dev libxml2-dev libz-dev clang clang-tools
           mkdir build
           cd build
-          scan-build gcc cmake ..
-          scan-build gcc make
+          scan-build cmake ..
+          scan-build make
 
       # Test
       - name: Testing
