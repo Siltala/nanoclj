@@ -32,8 +32,8 @@ jobs:
           sudo apt install libutf8proc-dev libsixel-dev libpcre2-dev libcairo2-dev libshp-dev libcurl4-gnutls-dev libxml2-dev libz-dev clang-tools
           mkdir build
           cd build
-          scan-build cmake ..
-          scan-build --use-cc=gcc --use-c++=gcc make
+          scan-build gcc cmake ..
+          scan-build gcc make
 
       # Test
       - name: Testing
