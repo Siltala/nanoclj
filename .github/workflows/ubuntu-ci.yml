@@ -33,7 +33,7 @@ jobs:
           mkdir build
           cd build
           scan-build cmake ..
-          scan-build make
+          scan-build --use-cc=gcc --use-c++=gcc make
 
       # Test
       - name: Testing
